@@ -1,0 +1,27 @@
+.nav_link {
+  @include navbar-link;
+}
+.nav_link:last-child {
+  margin-right: 0;
+}
+
+.logo {
+  @include logo;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.343);
+}
+.btn {
+  @include btn;
+}
+.btn:is(:hover) {
+  background-color: transparent;
+  border: 3px solid $btn-color;
+  color: $title-color;
+}

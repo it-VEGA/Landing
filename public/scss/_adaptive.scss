@@ -1,0 +1,47 @@
+@media screen and (max-width: 768px) {
+  .header {
+    position: relative;
+  }
+  .header_wrapper {
+    .header__nav {
+      position: fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      top: 61px;
+      right: -100%;
+      z-index: 1;
+      transition: 0.4s ease-in-out;
+      background-color: white;
+
+      .nav_link {
+        font-size: 22px !important;
+        margin: 24px 0px !important;
+      }
+    }
+    .header__nav.show {
+      right: 0;
+    }
+    .burger {
+      display: block !important;
+      z-index: 1;
+    }
+  }
+  .row {
+    .btn {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+  .hero {
+    background-size: cover;
+    background: none;
+  }
+  .section-6 {
+    padding-top: 100px;
+  }
+}

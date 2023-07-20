@@ -1,0 +1,88 @@
+@import "./basic/default";
+@import "./basic/components";
+@import "./basic/colors";
+@import "./basic/fonts";
+@import "./basic/mixins";
+.header {
+  width: 100%;
+  padding: 18px 0;
+  z-index: 1;
+  position: absolute;
+  background-color: transparent;
+  .container {
+    .header_wrapper {
+      @include d-flex-jb;
+      .burger {
+        display: none;
+      }
+    }
+  }
+}
+.hero {
+  background: url("../images/Blob.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 60%;
+  .container {
+    .row {
+      .title {
+        @include title;
+      }
+      .sub_title {
+        @include sub-title;
+      }
+    }
+  }
+}
+.section-2 {
+  padding-top: 160px;
+}
+.section-3,
+.section-4 {
+  padding-top: 122px;
+}
+.section-5 {
+  padding: 122px 0;
+}
+.title-content {
+  @include title-content;
+}
+.subtitle-content {
+  @include subtitle-content;
+}
+.section-6 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: $light;
+  position: relative;
+  strong {
+    font-size: 50px;
+    font-weight: 500;
+    color: $title-color;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: $logo-color;
+  }
+  small {
+    font-size: 14px;
+    color: gray;
+  }
+}
+.section-6::before {
+  content: "";
+  min-height: 30vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/wave.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.footer {
+  background-color: $footer;
+}
+@import "./adaptive";
